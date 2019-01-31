@@ -21,6 +21,13 @@ class FixedStack():
 			self.items[self.pointer] = None
 			return ret
 
+	def is_empty(self):
+		return self.items == []
+
+	def peek(self):
+		if not self.is_empty():
+			return self.items[self.pointer - 1]
+
 	def display(self):
 		for item in range(self.pointer):
 			print(self.items[item])
