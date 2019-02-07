@@ -1,21 +1,21 @@
 class FixedQueue():	
 	def __init__(self, cap):
 		self.items = [None] * cap
-		self.front = 0
-		self.back = 0
+		self.last = -1
+		self.first = 0
 		self.cap = cap
 
 	def enqueue(self, item):
-		if self.pointer == self.cap:
+		if self.last == self.cap - 1:
 			return "Unable to push as the Queue is full"
 		else:
-			self.items[self.pointer] = item
-			self.pointer += 1
+			self.last += 1
+			self.items[self.last] = item
 			return item
 		
 	def dequeue(self):
-		if self.pointer == 0:
-			return "Unable to pop as the Queue is empty"
+		if self.first == self.last:
+			return "Unable to dequeue as the Queue is empty"
 		else:
 			self.pointer -= 1
 			ret = self.items[self.pointer]
@@ -34,5 +34,5 @@ class FixedQueue():
 			print(self.items[item])
 
 	def display_reverse(self):
-		for item in range(self.back, self.front):
+		for item in ReverseRange(self.back, self.front):
 			print(self.items[item])
