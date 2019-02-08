@@ -1,3 +1,5 @@
+from ds.iterators.reverse_range import *
+
 class FixedQueue():	
 	def __init__(self, cap):
 		self.items = [None] * cap
@@ -17,22 +19,18 @@ class FixedQueue():
 		if self.first == self.last:
 			return "Unable to dequeue as the Queue is empty"
 		else:
-			self.pointer -= 1
-			ret = self.items[self.pointer]
-			self.items[self.pointer] = None
+			ret = self.items[self.first]
+			self.items[self.first] = None
+			self.first += 1
 			return ret
 
 	def is_empty(self):
 		return self.items == []
 
-	def peek(self):
-		if not self.is_empty():
-			return self.items[self.pointer - 1]
-
 	def display_forward(self):		
-		for item in range(self.back, self.front):
+		for item in range(self.first, self.last + 1):
 			print(self.items[item])
 
 	def display_reverse(self):
-		for item in ReverseRange(self.back, self.front):
+		for item in ReverseRange(self.last, self.first):
 			print(self.items[item])
