@@ -1,4 +1,4 @@
-from queue import Queue
+from queue.queue_simple import Queue
 
 queue_obj = Queue()
 

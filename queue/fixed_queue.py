@@ -1,6 +1,6 @@
-from ds.iterators.reverse_range import *
+from iterators.reverse_range import *
 
-class FixedQueue():	
+class FixedQueue:	
 	def __init__(self, cap):
 		self.items = [None] * cap
 		self.last = -1

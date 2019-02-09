@@ -1,4 +1,4 @@
-class FixedStack():	
+class FixedStack:	
 	def __init__(self, cap):
 		self.items = [None] * cap
 		self.pointer = 0

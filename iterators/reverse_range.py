@@ -1,5 +1,5 @@
 # iterator: requires, __iter__ and __next__
-#iterable: anything which can be userd in for <item> in <iterable=list>
+# iterable: anything which can be userd in for <item> in <iterable=list>
 # Writing a custom iterator using a class way
 class ReverseRange:
 	"""Generates Reverse Range"""

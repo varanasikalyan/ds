@@ -1,4 +1,4 @@
-from stack import Stack
+from stack.stack_simple import Stack
 
 stack_obj = Stack()
 
