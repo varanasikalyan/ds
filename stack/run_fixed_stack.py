@@ -1,6 +1,8 @@
+from os import system
 from stack.fixed_stack import FixedStack
 
 def exec_fixed():
+	system('cls')
 	inp = int(input("Enter the cap on the stack size: "))
 	stack_obj = FixedStack(inp)
 

@@ -1,3 +1,4 @@
+from os import system
 from queue.queue_simple import Queue
 
 queue_obj = Queue()
@@ -5,6 +6,7 @@ queue_obj = Queue()
 option = True
 
 while option:
+	system('cls')
 	print("1. View Queue")
 	print("2. Push item into Queue")
 	print("3. Pop item out of Queue")

@@ -1,9 +1,11 @@
+import os
 from stack.run_fixed_stack import exec_fixed as stack_fixed
 from queue.run_fixed_queue import exec_fixed as queue_fixed
 
 option = True
 
 while option:	
+	os.system('cls')
 	print("1. Fixed Stack")
 	print("2. Stack")
 	print("3. Fixed Queue")

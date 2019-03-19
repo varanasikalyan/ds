@@ -1,6 +1,8 @@
+from os import system
 from queue.fixed_queue import FixedQueue
 
 def exec_fixed():
+	system('cls')
 	inp = int(input("Enter the cap on the Queue size: "))
 	queue_obj = FixedQueue(inp)
 

@@ -1,3 +1,4 @@
+from os import system
 from stack.stack_simple import Stack
 
 stack_obj = Stack()
@@ -5,6 +6,7 @@ stack_obj = Stack()
 option = True
 
 while option:
+	system('cls')
 	print("1. View Stack")
 	print("2. Push item into Stack")
 	print("3. Pop item out of Stack")
